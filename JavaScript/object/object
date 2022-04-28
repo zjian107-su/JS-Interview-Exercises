@@ -1,0 +1,40 @@
+let base = { a: 1, b: 2 };
+let obj = Object.create(base);
+obj["c"] = 3; // has to be a string due to dynamically accessing
+obj["d"] = 4; // has to be a strinxg
+for (prop in obj) {
+  if (obj.hasOwnProperty(prop)) {
+    console.log(prop);
+  }
+}
+
+// works because plain object, for-in wont work in map
+// also, it will lose the order of the key
+console.log("print all prop");
+for (prop in obj) {
+  console.log(prop);
+}
+
+// key doens't have to quote
+let obj02 = {
+  a: 1, // 'a' is a valid identifier
+  _prop: 2, // '_prop' is a valid identifier
+  $value: 3, // '$value' is a valid identifier
+};
+
+let obj03 = {
+  "first name": "John", // Contains a space
+  "123property": "value", // Starts with a number
+  "special-char!": "value", // Contains a special character
+};
+
+// create with base can inherent, hasOwnProperty can check if it is inherent
+let base01 = { a: 1, b: 2 };
+let obj01 = Object.create(base01);
+obj01[c] = 3;
+for (prop in obj01) {
+  if (obj01.hasOwnProperty(prop)) {
+    console.log(prop);
+  }
+}
+// c

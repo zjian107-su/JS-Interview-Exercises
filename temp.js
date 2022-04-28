@@ -1,13 +1,8 @@
-"use strict";
-
-let array = [10, 20, 30];
-
-console.log("for-of");
-for (let index in array) {
-  console.log(typeof index);
-}
-
-console.log("for-in");
-for (let value of array) {
-  console.log(value);
+let base = { a: 1, b: 2 };
+let obj = Object.create(base);
+obj[c] = 3;
+for (prop in obj) {
+  if (obj.hasOwnProperty(prop)) {
+    console.log(prop);
+  }
 }
