@@ -11,7 +11,7 @@ function random() {
 }
 console.log(randomVal);
 
-// arrow function: Error
+// arrow function scope: Error
 const arrow = () => {
   var arrowValue = 5;
 };

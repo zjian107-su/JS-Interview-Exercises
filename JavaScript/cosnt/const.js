@@ -1,6 +1,6 @@
 "use strict";
 
-// const and let, is block scope within the cloest curly braces
+// const and let, is block scope within the closest curly braces
 function func() {
   if (true) {
     const tmp = 123;

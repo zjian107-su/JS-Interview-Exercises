@@ -1,8 +1,22 @@
-let base = { a: 1, b: 2 };
-let obj = Object.create(base);
-obj[c] = 3;
-for (prop in obj) {
-  if (obj.hasOwnProperty(prop)) {
-    console.log(prop);
-  }
+let error = true;
+
+function doAsyncTask() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (error) {
+        reject("error");
+      } else {
+        resolve("done");
+      }
+    }, 1000);
+  });
 }
+
+doAsyncTask().then(
+  () => {
+    console.log("success");
+  },
+  () => {
+    console.log("failed");
+  }
+);
