@@ -20,3 +20,27 @@ let obj = {
 
 let aFunc = obj.sayMyName();
 aFunc("Miky");
+
+
+
+// exmaple 02: counter app, use count as private field
+
+function counter() {
+  let count = 0;
+
+  return {
+    increment: function () {
+      count++;
+      return count;
+    },
+
+    decrement: function () {
+      count--;
+      return count;
+    },
+  };
+}
+
+let counterControl = counter();
+console.log(counterControl.increment());
+console.log(counterControl.decrement());
