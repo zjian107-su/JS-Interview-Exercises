@@ -33,17 +33,33 @@ rejectedPromise.catch((error) => {
   console.log(error);
 });
 
-// normal
-let condition = true;
-let normalPromise = new Promise((resolve, reject) => {
+// Example 02: promise
+let myPromise = new Promise((resolve, reject) => {
+  let condition = true;
   if (condition) {
-    resolve("Success");
+    resolve(5);
   } else {
-    ("failure");
+    reject("error message");
   }
 });
 
-normalPromise.then((data) => {
-  console.log("normal---");
-  console.log(data);
-});
+myPromise
+  .then((data) => {
+    console.log(data);
+    console.log("example 02 finsihed -----------");
+  })
+  .catch((error) => {
+    console.log(error);
+    console.log("example 02 finsihed -----------");
+  });
+
+// Example 03: async await
+
+async function myPromise01() {
+  try {
+    let data = await myPromise;
+    console.log(data);
+  } catch (error) {
+    console.log(data);
+  }
+}
