@@ -43,23 +43,23 @@ let myPromise = new Promise((resolve, reject) => {
   }
 });
 
-// myPromise
-//   .then((data) => {
-//     console.log(data);
-//     console.log("example 02 finsihed -----------");
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//     console.log("example 02 finsihed -----------");
-//   });
+myPromise
+  .then((data) => {
+    console.log(data);
+    console.log("example 02 finsihed -----------");
+  })
+  .catch((error) => {
+    console.log(error);
+    console.log("example 02 finsihed -----------");
+  });
 
 // Example 03: async await
 
-(async function myPromise01() {
-  try {
-    let data = await myPromise;
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
-})();
+// (async function myPromise01() {
+//   try {
+//     let data = await myPromise;
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// })();

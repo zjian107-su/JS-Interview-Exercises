@@ -1,65 +1,37 @@
-// class
-class obj04 {
-  name = "asim";
+const items = [
+  "Animals",
+  "Anime",
+  "Anti-Malware",
+  "Art & Design",
+  "Authentication & Authorization",
+  "Blockchain",
+  "Books",
+  "Business",
+  "Calendar",
+  "Cloud Storage & File Sharing",
+  "Continuous Integration",
+  "Cryptocurrency",
+  "Currency Exchange",
+  "Data Validation",
+  "Development",
+  "Dictionaries",
+  "Documents & Productivity",
+];
 
-  sayLater = function () {
-    // let self = this;
-    setTimeout(() => {
-      console.log(`111      ${this.name}`);
-    }, 1000);
-  };
+const map = new Map();
 
-  sayLater01 = function () {
-    let self = this;
-    setTimeout(function () {
-      console.log(`222      ${self.name}`);
-    }, 1000);
-  };
+// Loop through the items and populate the map
+items.forEach((item) => {
+  const firstLetter = item.charAt(0).toUpperCase();
 
-  sayOk = () => {
-    setTimeout(() => {
-      console.log(`333       ${this.name}`);
-    }, 1000);
-    console.log(`444       ${this.name}`);
-  };
+  if (!map.has(firstLetter)) {
+    map.set(firstLetter, []);
+  }
+
+  map.get(firstLetter).push(item);
+});
+
+for (let [key, value] of map) {
+  console.log("new entry");
+  console.log(key, value);
 }
-
-let obj04Ins = new obj04();
-
-obj04Ins.sayLater(); // Outputs: "asim" after 1 second
-
-obj04Ins.sayOk();
-
-obj04Ins.sayLater01();
-
-// object
-let obj = {
-  name: "asim",
-
-  sayLater: function () {
-    // let self = this;
-    setTimeout(() => {
-      console.log(`555      ${this.name}`);
-    }, 1000);
-  },
-
-  sayLater01: function () {
-    let self = this;
-    setTimeout(function () {
-      console.log(`666      ${self.name}`);
-    }, 1000);
-  },
-
-  sayOk: () => {
-    setTimeout(() => {
-      console.log(`777       ${this.name}`);
-    }, 1000);
-    console.log(`888       ${this.name}`);
-  },
-};
-
-obj.sayLater(); // Outputs: "asim" after 1 second
-
-obj.sayOk();
-
-obj.sayLater01();
