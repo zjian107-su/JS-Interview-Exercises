@@ -1,37 +1,8 @@
-const items = [
-  "Animals",
-  "Anime",
-  "Anti-Malware",
-  "Art & Design",
-  "Authentication & Authorization",
-  "Blockchain",
-  "Books",
-  "Business",
-  "Calendar",
-  "Cloud Storage & File Sharing",
-  "Continuous Integration",
-  "Cryptocurrency",
-  "Currency Exchange",
-  "Data Validation",
-  "Development",
-  "Dictionaries",
-  "Documents & Productivity",
-];
+function Parent() {}
+Parent.prototype.value = 42;
 
-const map = new Map();
+function Child() {}
+Child.prototype = new Parent();
 
-// Loop through the items and populate the map
-items.forEach((item) => {
-  const firstLetter = item.charAt(0).toUpperCase();
-
-  if (!map.has(firstLetter)) {
-    map.set(firstLetter, []);
-  }
-
-  map.get(firstLetter).push(item);
-});
-
-for (let [key, value] of map) {
-  console.log("new entry");
-  console.log(key, value);
-}
+const obj = new Child();
+console.log(obj.value); // What does this log?

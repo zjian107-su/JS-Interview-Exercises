@@ -1,3 +1,10 @@
+/**
+ * Promise will need a call backfunction.
+ * It needs resolve and reject function, and in the return function, you need to define the condition of resolve and reject
+ *
+ * To use it, you need to chain it with then() and catch()
+ * */
+
 let myPromise = new Promise((resolve, reject) => {
   let condition = true;
   if (condition) {

@@ -1,3 +1,13 @@
+/**
+ * to create a observable from scratch
+ * you nee pass in observer as the param of the call-back function
+ * You may fetch information, then set the condition of next, complete and error.
+ *
+ * to use it
+ * subscribe({next, error, complete})
+ * within that object, those 3 are call-back functions
+ */
+
 import { Observable } from "rxjs";
 
 //https://jsonplaceholder.typicode.com/posts
