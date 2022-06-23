@@ -1,8 +1,9 @@
-function Parent() {}
-Parent.prototype.value = 42;
-
-function Child() {}
-Child.prototype = new Parent();
-
-const obj = new Child();
-console.log(obj.value); // What does this log?
+let a = {
+  Alice: ["Bob", "Charlie", "Nicole"],
+  Bob: ["Alice", "Dennis", "Edward", "Charlie"],
+  Charlie: ["Dennis", "Bob"],
+  Dennis: ["Charlie", "Edward"],
+  Pam: ["Dennis", "Dennis", "Edward"],
+  Edward: ["Bob", "Pam", "Dennis"],
+  Nicole: ["Alice"],
+};
