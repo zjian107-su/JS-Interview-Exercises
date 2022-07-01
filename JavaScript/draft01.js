@@ -1,9 +1,16 @@
-let a = {
-  Alice: ["Bob", "Charlie", "Nicole"],
-  Bob: ["Alice", "Dennis", "Edward", "Charlie"],
-  Charlie: ["Dennis", "Bob"],
-  Dennis: ["Charlie", "Edward"],
-  Pam: ["Dennis", "Dennis", "Edward"],
-  Edward: ["Bob", "Pam", "Dennis"],
-  Nicole: ["Alice"],
+a = "daniel";
+b = "karthus";
+c = "robyn";
+
+res = `${a}, ${b}, ${c}`;
+console.log(res);
+
+myFunc = function () {
+  a = "daniel";
+  b = "karthus";
+  c = "robyn";
+  res = `${a}, ${b}, ${c}`;
+  return res;
 };
+
+myFunc();
